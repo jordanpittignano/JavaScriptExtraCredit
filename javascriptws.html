@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+</head>
+
+<body>
+    <script language="javascript">
+        function runProblems () {
+            problem1();
+            problem2();
+            problem3();
+            problem4();
+            problem5();
+        }
+
+        function problem1() {
+            document.write("Problem 1: </br>")
+            for (let n = 40; n >= 10; n-=2) {
+                document.write(n);
+                document.write(" ");
+            }
+
+            document.write("</br> </br>")
+        }
+
+        function problem2() {
+            document.write("Problem 2: </br>");
+            let userNumber = 0;
+            let sum = 0;
+
+            while (sum <= 20) {
+                userNumber = prompt("Give me a number (Q #2)");
+                userNumber = parseInt(userNumber);
+                sum = sum + userNumber;
+            }
+            document.write("Sum has exceeded 20 </br> </br>");
+        }
+
+        function problem3() {
+            document.write("Problem 3: </br>");
+            let userNumber = 0;
+            let sum = 0;
+            let arrayOfNums = [];
+
+            while (sum <= 20) {
+                userNumber = prompt("Give me a number (Q #3)");
+                userNumber = parseInt(userNumber);
+                arrayOfNums.push(userNumber);
+                sum = sum + userNumber;
+            }
+            document.write(arrayOfNums);
+            document.write("</br> </br>");
+        }
+
+        function problem4() {
+            document.write("Problem 4: </br>");
+            let songs = [];
+            songs["Baby"] = "Justin Bieber";
+            songs["Mirrorball"] = "Taylor Swift";
+            songs["How to Save a Life"] = "The Fray";
+            songs["Espresso"] = "Sabrina Carpenter";
+            songs["Wonderwall"] = "Oasis";
+            
+            for (song in songs) {
+                document.write(song + " by " + songs[song] +  "</br> </br>");
+            }
+        }
+
+        function problem5() {
+            document.write("Problem 5: </br>");
+            let songs = [];
+            songs["Baby"] = "Justin Bieber";
+            songs["Mirrorball"] = "Taylor Swift";
+            songs["How to Save a Life"] = "The Fray";
+            songs["Espresso"] = "Sabrina Carpenter";
+            songs["Wonderwall"] = "Oasis";
+            let userBand = prompt("Give me a band");
+
+            for (song in songs) {
+                if (songs[song] == userBand) {
+                    document.write(song + " ");
+                }
+            }
+            document.write("</br> </br>");  
+        }
+
+        // run the program
+        runProblems();
+
+    </script>
+
+</body>
+
+</html>
